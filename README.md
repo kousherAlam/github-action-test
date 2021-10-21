@@ -163,3 +163,9 @@ need: <depended-job-name>
 
 
 
+
+# How github action work ?
+Github actions are command line script themself, like we run the bash script. 
+
+
+
