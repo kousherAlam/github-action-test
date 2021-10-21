@@ -1,9 +1,11 @@
 ## github action 
 
 Practice App: https://github-actions-hero.vercel.app/
+                https://github-actions-hero.vercel.app/
+
 Github Context: https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
 
-
+https://lab.github.com/
 
 
 we can use existing github action or create our own github action in the any point of our workflow life cycle. Github action allow us to develop our own custom Software Development Lifecycle (SDLC)s
@@ -135,4 +137,29 @@ strategy:
 - Branch protections
 - Required reviews
 - Obvious approvals 
+
+
+
+## Build Artifact Storage
+a file or files generated after build. we can use of upload and download action to save our artifact
+
+```yaml
+uses: actions/upload-artifact@master
+```
+
+```yaml
+uses: actions/download-artifact@master
+```
+Job are runs in parallel, but if we needed we can make one job depend on other job finish by the need key. 
+
+```yaml
+need: <depended-job-name>
+```
+
+
+### Merge Protection
+1. first add label approval
+2. depend on leabel approval add protection from `repository settings`
+
+
 
